@@ -1,0 +1,8 @@
+streamlit
+openai
+pandas
+python-dotenv
+plotly
+delta-spark
+pyspark
+pyarrow

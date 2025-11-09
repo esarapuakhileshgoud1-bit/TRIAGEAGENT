@@ -1,0 +1,62 @@
+{
+  "servicenow": {
+    "enabled": false,
+    "instance_url": "https://your-instance.service-now.com",
+    "username": "YOUR_SERVICENOW_USERNAME",
+    "password": "YOUR_SERVICENOW_PASSWORD",
+    "table": "incident",
+    "api_endpoint": "/api/now/table/incident"
+  },
+  "enterprise_mode": false,
+  "jira": {
+    "enabled": false,
+    "server_url": "https://your-domain.atlassian.net",
+    "email": "YOUR_JIRA_EMAIL",
+    "api_token": "YOUR_JIRA_API_TOKEN",
+    "project_key": "PROJ",
+    "jql_query": "project = PROJ AND status != Done"
+  },
+  "openai": {
+    "enabled": true,
+    "model": "gpt-5",
+    "use_mock_if_unavailable": true
+  },
+  "engineers": [
+    {
+      "name": "Alice Chen",
+      "skills": ["Network", "Security", "DevOps"],
+      "availability": "available",
+      "max_workload": 75
+    },
+    {
+      "name": "Bob Smith",
+      "skills": ["Database", "Backend", "DevOps"],
+      "availability": "available",
+      "max_workload": 75
+    },
+    {
+      "name": "Carol Martinez",
+      "skills": ["Frontend", "Backend", "Access"],
+      "availability": "available",
+      "max_workload": 75
+    },
+    {
+      "name": "David Lee",
+      "skills": ["Security", "Network", "Database"],
+      "availability": "available",
+      "max_workload": 75
+    },
+    {
+      "name": "Emma Wilson",
+      "skills": ["Frontend", "DevOps", "Access"],
+      "availability": "available",
+      "max_workload": 75
+    }
+  ],
+  "data_storage": {
+    "local_mode": true,
+    "format": "parquet",
+    "delta_lake_enabled": false,
+    "delta_table_path": "s3://your-bucket/delta-tables/tickets"
+  }
+}
